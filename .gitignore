@@ -1,4 +1,5 @@
 .idea
-/backend/node_modules/
 .gitignore
 /backend/.env
+node_modules
+/package-lock.json
