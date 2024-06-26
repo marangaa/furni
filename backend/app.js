@@ -11,12 +11,13 @@ const app = express();
 connectDB();
 
 app.use(express.json());
+const MONGO_URI = "mongodb+srv://rchdmaranga:cluster0@cluster0.whqvjf9.mongodb.net/shop";
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
+    store: MongoStore.create({ mongoUrl: MONGO_URI }),
   })
 );
 
